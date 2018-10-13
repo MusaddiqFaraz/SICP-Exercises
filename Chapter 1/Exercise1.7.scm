@@ -7,15 +7,24 @@
 (define (average x y)
   (/ (+ x y) 2))
 
-(define (improve guess x)
-  (average guess (/ x guess)))
+(define (sqrt x)
+  (define (good-guess? guess )
+    (< (abs (- (square guess)  x)) 0.001))
+  (define (improve guess )
+    (average guess (/ x guess)))
+  (define (sqrt-rec guess )
+    (if (good-guess? guess)
+	guess
+	(sqrt-rec (improve guess))))
+  (sqrt-rec 1.0))
 
-(define (good-guess? guess x)
-  (< (abs (- (square guess)  x)) 0.001))
+  
 
-(define (sqrt-rec guess x)
-  (if (good-guess? guess x)
-      guess
-      (sqrt-rec (improve guess x) x)))
+  
+
+
+
+
+
 
 

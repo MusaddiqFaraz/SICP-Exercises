@@ -1,8 +1,0 @@
-#lang sicp
-
-;;; Exercise 1.16
-
-(define (even? n)
-  (= (remainder n 2) 0))
-
-

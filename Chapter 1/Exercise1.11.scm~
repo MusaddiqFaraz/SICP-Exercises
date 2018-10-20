@@ -1,8 +1,0 @@
-;;; Exercise 1.11
-
-(define (f n)
-  (cond ((< n 3) n)
-	(else
-	    (+ (f n-1)
-	       (f (* 2 (n-2)))
-	       (f (* 3 (n-3)))))))

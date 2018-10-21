@@ -15,6 +15,6 @@
           ((even? small) (mult (double large) (halve small)))
           (else (+ large (mult large (- small 1))))))
   (cond ((or (= a 0) (= b 0)) 0)
-        ((< a b) (mult a b))
-        ((< b a) (mult b a))
+        ((< a b) (mult b a))
+        ((< b a) (mult a b))
         (else (mult a b))))
